@@ -7,20 +7,24 @@ module ChefCookbook
         @node = node
       end
 
-      def root_user
+      def root
         @node['current_user']
       end
 
-      def instance_user
+      def user
         ::ENV['SUDO_USER']
       end
 
-      def instance_user_home
-        ::Etc.getpwnam(instance_user).dir
+      def user_home
+        ::Etc.getpwnam(user).dir
       end
 
-      def instance_group
-        ::Etc.getgrgid(::Etc.getpwnam(instance_user).gid).name
+      def group
+        ::Etc.getgrgid(::Etc.getpwnam(user).gid).name
+      end
+
+      def fqdn
+        @node['automatic']['fqdn'] || @node['automatic']['ipaddress']
       end
     end
   end
