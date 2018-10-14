@@ -24,7 +24,7 @@ module ChefCookbook
       end
 
       def fqdn
-        @node['automatic']['fqdn'] || @node['automatic']['ipaddress']
+        @node['fqdn'] || @node['ipaddress']
       end
     end
   end

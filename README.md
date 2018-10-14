@@ -13,7 +13,7 @@ instance.fqdn  # test.box.dev
 ```
 
 ## Notes
-`fqdn` property is obtained from `node['automatic']['fqdn']` or `node['automatic']['ipaddress']`.
+`fqdn` property is obtained from `node['fqdn']` or `node['ipaddress']`.
 
 ## License
 MIT @ [Alexander Pyatkin](https://github.com/aspyatkin)

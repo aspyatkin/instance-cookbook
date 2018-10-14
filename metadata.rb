@@ -3,7 +3,7 @@ maintainer 'Alexander Pyatkin'
 maintainer_email 'aspyatkin@gmail.com'
 license 'MIT'
 description 'Instance helpers'
-version '2.0.0'
+version '2.0.1'
 
 scm_url = 'https://github.com/aspyatkin/instance-cookbook'
 source_url scm_url if respond_to?(:source_url)
